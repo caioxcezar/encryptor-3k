@@ -12,7 +12,7 @@ public class MenuController {
     public void encriptarArquivo() throws IOException {
         Stage stage = new Stage();
         Parent root = FXMLLoader.load(getClass().getResource("../view/Encriptar.fxml"));
-        stage.setTitle("Encriptografar");
+        stage.setTitle("criptografar");
         stage.setScene(new Scene(root, 640, 380));
         stage.initModality(Modality.APPLICATION_MODAL);
         stage.showAndWait();

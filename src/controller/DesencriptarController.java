@@ -48,7 +48,7 @@ public class DesencriptarController implements Initializable {
                     }
                 }
             });
-        } catch (SQLException | ClassNotFoundException e) {
+        } catch (Exception e) {
             FxUtils.mensagemLoad("Ocorreu um erro ao listar mensagens", e.getMessage());
         }
     }

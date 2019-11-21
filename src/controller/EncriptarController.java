@@ -18,7 +18,7 @@ public class EncriptarController {
             String mensagem = txt_mensagem.getText();
             String senha = txt_senha.getText();
             Texto t = new Texto(mensagem, senha);
-            t.encriptografar();
+            t.criptografar();
             TextoDao.salvar(t);
             FxUtils.mensagemLoad("Salvo com sucesso", String.format("Mensagem descriptografada: %s\n\n" +
                     "Mensagem encriptografada: %s\n\n" +

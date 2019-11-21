@@ -3,11 +3,14 @@ package dao;
 import model.Texto;
 import utils.DaoUtils;
 
+import javax.crypto.NoSuchPaddingException;
+import java.io.UnsupportedEncodingException;
+import java.security.NoSuchAlgorithmException;
 import java.sql.*;
 import java.util.ArrayList;
 
 public class TextoDao {
-    public static Texto get(int codigo) throws SQLException, ClassNotFoundException {
+    public static Texto get(int codigo) throws Exception {
         Connection conn = null;
         PreparedStatement p = null;
         ResultSet rs = null;
@@ -24,7 +27,7 @@ public class TextoDao {
         }
     }
 
-    public static void salvar(Texto texto) throws SQLException, ClassNotFoundException, Exception {
+    public static void salvar(Texto texto) throws Exception {
         if (!texto.isEncriptado()) {
             throw new Exception("A mensagem deve estar encriptada");
         }
@@ -44,7 +47,7 @@ public class TextoDao {
         }
     }
 
-    public static void alterar(Texto texto) throws SQLException, ClassNotFoundException {
+    public static void alterar(Texto texto) throws Exception {
         Connection conn = null;
         PreparedStatement p = null;
         String sql = "UPDATE textos_tb "
@@ -76,7 +79,7 @@ public class TextoDao {
         }
     }
 
-    public static ArrayList<Texto> listar() throws SQLException, ClassNotFoundException {
+    public static ArrayList<Texto> listar() throws Exception {
         Connection conn = null;
         Statement st = null;
         ArrayList<Texto> textos = new ArrayList<>();
@@ -94,7 +97,7 @@ public class TextoDao {
         }
     }
 
-    private static Texto instanciarTexto(ResultSet rs) throws SQLException {
+    private static Texto instanciarTexto(ResultSet rs) throws Exception {
         return new Texto(rs.getInt("codigo"), rs.getString("texto"), rs.getString("senha"), true);
     }
 }

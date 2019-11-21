@@ -1,7 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/Usuario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/Encrypt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/EncryptString.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/Encryptable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/PasswordEncrypt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/sample/sample.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/encryptor-3k/controller/DesencriptarController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/encryptor-3k/controller/DesencriptarController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/encryptor-3k/controller/EncriptarController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/encryptor-3k/controller/EncriptarController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/encryptor-3k/controller/MenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/encryptor-3k/controller/MenuController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/encryptor-3k/dao/TextoDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/encryptor-3k/dao/TextoDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/encryptor-3k/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/encryptor-3k/main/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/encryptor-3k/model/Texto.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/encryptor-3k/model/Texto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/encryptor-3k/utils/CryptatorString.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/encryptor-3k/view/Encriptar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/encryptor-3k/view/Encriptar.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/DesencriptarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/DesencriptarController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/EncriptarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/EncriptarController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/MenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/TextoDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/TextoDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Texto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Texto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/CryptatorString.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/Encriptar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Encriptar.fxml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +95,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -78,8 +105,14 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectId" id="1SQutQ66whKGa20S4vYFxTdPWij" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectReloadState">
     <option name="STATE" value="0" />
   </component>
@@ -94,20 +127,24 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/mysql-connector-java-5.1.48-bin.jar!/" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="utils" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\caioc\IdeaProjects\encryptor-3k\src\view" />
     </key>
@@ -213,11 +250,24 @@
       <workItem from="1571513864422" duration="10478000" />
       <workItem from="1571591483209" duration="3908000" />
       <workItem from="1571595487581" duration="7799000" />
+      <workItem from="1573918782122" duration="115000" />
+      <workItem from="1573919242056" duration="14739000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
@@ -227,19 +277,14 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/utils/CryptatorString.java</url>
-          <line>33</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/utils/FxUtils.java</url>
           <line>14</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/utils/CryptatorString.java</url>
-          <line>52</line>
-          <option name="timeStamp" value="22" />
+          <url>file://$PROJECT_DIR$/src/main/Main.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="24" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

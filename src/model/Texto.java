@@ -1,6 +1,7 @@
 package model;
 
-import utils.CryptatorString;
+import utils.EncryptString;
+import utils.PasswordEncrypt;
 
 import javax.crypto.BadPaddingException;
 import javax.crypto.IllegalBlockSizeException;
@@ -11,27 +12,27 @@ import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 
 public class Texto {
+    private EncryptString cryptator;
     private int codigo;
     private String texto;
-    private String senha;
     private boolean encriptado = false;
 
-    public Texto(int codigo, String texto, String senha) {
+    public Texto(int codigo, String texto, String senha) throws Exception {
         this.codigo = codigo;
         this.texto = texto;
-        setSenha(senha);
+        this.cryptator = new EncryptString(String.format("%16s", senha));
     }
 
-    public Texto(int codigo, String texto, String senha, boolean encriptado) {
+    public Texto(int codigo, String texto, String senha, boolean encriptado) throws Exception {
         this.codigo = codigo;
         this.texto = texto;
         this.encriptado = encriptado;
-        this.senha = senha;
+        this.cryptator = new EncryptString(String.format("%16s", senha));
     }
 
-    public Texto(String texto, String senha) {
+    public Texto(String texto, String senha) throws Exception {
         this.texto = texto;
-        setSenha(senha);
+        this.cryptator = new EncryptString(String.format("%16s", senha));
     }
 
     public int getCodigo() {
@@ -42,37 +43,36 @@ public class Texto {
         return texto;
     }
 
-    private void setSenha(String senha) {
-        if (encriptado == false) {
-            this.senha = String.format("%16s", senha);
-        }
+    public void setSenha(String senha) throws Exception {
+        if (encriptado)
+            throw new Exception("O texto deve estar descriptografado");
+        this.cryptator.setChave(String.format("%16s", senha));
     }
 
-    public String getSenha() {
-        return senha;
+    public String getSenha() throws Exception {
+        return this.cryptator.getChave();
     }
 
-    public void setTexto(String texto) {
-        if (encriptado == false) {
-            this.texto = texto;
-        }
+    public void setTexto(String texto) throws IllegalBlockSizeException, InvalidKeyException, InvalidAlgorithmParameterException, BadPaddingException, UnsupportedEncodingException {
+        this.texto = texto;
+        if (encriptado)
+            this.criptografar();
     }
 
     public boolean isEncriptado() {
         return encriptado;
     }
 
-    public void encriptografar() throws NoSuchPaddingException, BadPaddingException, InvalidKeyException, NoSuchAlgorithmException, IllegalBlockSizeException, UnsupportedEncodingException, InvalidAlgorithmParameterException {
-
-        if (encriptado == false) {
-            this.texto = CryptatorString.encriptografar(texto, senha);
+    public void criptografar() throws BadPaddingException, InvalidKeyException, IllegalBlockSizeException, UnsupportedEncodingException, InvalidAlgorithmParameterException {
+        if (!encriptado) {
+            this.texto = cryptator.criptografar(texto);
             encriptado = true;
         }
     }
 
-    public void descriptografar() throws NoSuchPaddingException, BadPaddingException, InvalidKeyException, NoSuchAlgorithmException, IllegalBlockSizeException, UnsupportedEncodingException, InvalidAlgorithmParameterException {
-        if (encriptado == true) {
-            this.texto = CryptatorString.descriptografar(texto, senha);
+    public void descriptografar() throws BadPaddingException, InvalidKeyException, IllegalBlockSizeException, UnsupportedEncodingException, InvalidAlgorithmParameterException {
+        if (encriptado) {
+            this.texto = cryptator.descriptografar(texto);
             encriptado = false;
         }
     }
