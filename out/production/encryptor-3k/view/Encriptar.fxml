@@ -4,27 +4,15 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EncriptarController">
-   <children>
-      <AnchorPane prefHeight="380.0" prefWidth="640.0">
-         <children>
-            <Label fx:id="lbl_banner" alignment="CENTER" contentDisplay="CENTER" layoutX="214.0" layoutY="-12.0" prefHeight="77.0" prefWidth="212.0" text="Encriptar" textAlignment="CENTER" textOverrun="CLIP">
-               <font>
-                  <Font size="32.0" />
-               </font>
-            </Label>
-            <Label fx:id="lbl_mensagem" alignment="CENTER" contentDisplay="CENTER" layoutX="200.0" layoutY="48.0" prefHeight="35.0" prefWidth="247.0" text="Mensagem" textOverrun="CENTER_ELLIPSIS">
-               <font>
-                  <Font size="19.0" />
-               </font>
-            </Label>
-            <TextArea fx:id="txt_mensagem" layoutX="61.0" layoutY="88.0" prefHeight="164.0" prefWidth="526.0" />
-            <Button fx:id="btn_encriptar" layoutX="96.0" layoutY="322.0" mnemonicParsing="false" onMouseClicked="#encriptarMsg" prefHeight="25.0" prefWidth="129.0" text="Encriptar" />
-            <Button fx:id="btn_limparDados" layoutX="412.0" layoutY="322.0" mnemonicParsing="false" onMouseClicked="#limparMsg" prefHeight="25.0" prefWidth="129.0" text="Limpar Dados" />
-         </children>
-      </AnchorPane>
-   </children>
-</VBox>
+<AnchorPane prefHeight="380.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EncriptarController">
+   <Label alignment="CENTER" contentDisplay="CENTER" layoutX="214.0" layoutY="-12.0" prefHeight="77.0" prefWidth="212.0" text="Encriptar" textAlignment="CENTER" textOverrun="CLIP" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
+      <font>
+         <Font size="32.0" />
+      </font>
+   </Label>
+   <TextArea fx:id="txt_mensagem" layoutX="61.0" layoutY="88.0" prefHeight="176.0" prefWidth="526.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="80.0" />
+   <Button layoutX="14.0" layoutY="341.0" mnemonicParsing="false" onMouseClicked="#encriptarMsg" prefHeight="25.0" prefWidth="129.0" text="Encriptar" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" />
+   <Button layoutX="497.0" layoutY="341.0" mnemonicParsing="false" onMouseClicked="#limparMsg" prefHeight="25.0" prefWidth="129.0" text="Limpar Dados" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="15.0" />
+</AnchorPane>

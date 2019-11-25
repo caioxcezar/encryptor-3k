@@ -10,6 +10,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
+import main.Main;
 import model.Texto;
 import utils.FxUtils;
 
@@ -23,20 +24,24 @@ public class DesencriptarController implements Initializable {
     private TextArea txt_mensagem;
     @FXML
     private ListView<Texto> lista_mensagens;
-    @FXML
-    private PasswordField txt_senha;
     private ArrayList<Texto> textos;
     private Texto txtSelecionado;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         init();
     }
-    public void init() {
+
+    private void init() {
+        listarMensagens();
+    }
+
+    private void listarMensagens() {
         try {
-            textos = TextoDao.listar();
-            ObservableList<Texto> texto = FXCollections.observableArrayList(textos);
-            lista_mensagens.setItems(texto);
-            lista_mensagens.setCellFactory(param -> new ListCell<Texto>() {
+            textos = Main.usuario.getTextos();
+            ObservableList<Texto> obTextos = FXCollections.observableArrayList(textos);
+            lista_mensagens.getItems().clear();
+            lista_mensagens.setItems(obTextos);
+            lista_mensagens.setCellFactory(param -> new ListCell<>() {
                 @Override
                 protected void updateItem(Texto item, boolean empty) {
                     super.updateItem(item, empty);
@@ -44,7 +49,7 @@ public class DesencriptarController implements Initializable {
                     if (empty || item == null || item.getCodigo() == 0) {
                         setText(null);
                     } else {
-                        setText(String.format("id: %d msg: %s", item.getCodigo(), item.getTexto().substring(0, 15)));
+                        setText(String.format("id: %d", item.getCodigo()));
                     }
                 }
             });
@@ -52,12 +57,12 @@ public class DesencriptarController implements Initializable {
             FxUtils.mensagemLoad("Ocorreu um erro ao listar mensagens", e.getMessage());
         }
     }
-    public void desencriptarMsg() {
-        try {
-            if (txt_senha.getText().equals(txtSelecionado.getSenha().trim())) {
-                txtSelecionado.descriptografar();
-                txt_mensagem.setText(txtSelecionado.getTexto());
-            }
+
+    public void alterarMsg() {
+        try{
+            txtSelecionado.setTexto(txt_mensagem.getText());
+            this.txtSelecionado.criptografar();
+            TextoDao.alterar(this.txtSelecionado, Main.usuario);
         }catch (Exception ex) {
             utils.FxUtils.mensagemLoad("Erro ao carregar mensagem", ex.getLocalizedMessage());
         }
@@ -65,7 +70,25 @@ public class DesencriptarController implements Initializable {
     public void limparDados() {
         txt_mensagem.setText("");
     }
+
     public void exibirMsgEncriptada() {
         this.txtSelecionado = lista_mensagens.getSelectionModel().getSelectedItem();
+        if (txtSelecionado != null){
+            try {
+                txtSelecionado.descriptografar();
+                txt_mensagem.setText(txtSelecionado.getTexto());
+            }catch (Exception ex) {
+                utils.FxUtils.mensagemLoad("Erro ao carregar mensagem", ex.getLocalizedMessage());
+            }
+        }
+    }
+    public void apagarMsg(){
+        try{
+            Main.usuario.rmTexto(this.txtSelecionado);
+            listarMensagens();
+        }catch (Exception ex){
+            utils.FxUtils.mensagemLoad(ex.getLocalizedMessage());
+        }
+
     }
 }

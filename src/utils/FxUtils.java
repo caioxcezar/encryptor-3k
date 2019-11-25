@@ -10,6 +10,9 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class FxUtils {
+    public static void mensagemLoad(String mensagem) {
+        mensagemLoad("**Atenção**", mensagem);
+    }
     public static void mensagemLoad(String titulo, String mensagem) {
         try {
             FXMLLoader loader = new FXMLLoader(FxUtils.class.getResource("../view/MensagemTela.fxml"));

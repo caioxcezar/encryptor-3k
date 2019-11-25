@@ -17,12 +17,6 @@ public class Texto {
     private String texto;
     private boolean encriptado = false;
 
-    public Texto(int codigo, String texto, String senha) throws Exception {
-        this.codigo = codigo;
-        this.texto = texto;
-        this.cryptator = new EncryptString(String.format("%16s", senha));
-    }
-
     public Texto(int codigo, String texto, String senha, boolean encriptado) throws Exception {
         this.codigo = codigo;
         this.texto = texto;
@@ -59,8 +53,8 @@ public class Texto {
             this.criptografar();
     }
 
-    public boolean isEncriptado() {
-        return encriptado;
+    public boolean isNotEncriptado() {
+        return !encriptado;
     }
 
     public void criptografar() throws BadPaddingException, InvalidKeyException, IllegalBlockSizeException, UnsupportedEncodingException, InvalidAlgorithmParameterException {

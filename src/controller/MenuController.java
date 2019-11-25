@@ -25,4 +25,12 @@ public class MenuController {
         stage.initModality(Modality.APPLICATION_MODAL);
         stage.showAndWait();
     }
+    public void abrirConta() throws IOException {
+        Stage stage = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("../view/ContaInfo.fxml"));
+        stage.setTitle("Informação da Conta");
+        stage.setScene(new Scene(root, 640, 380));
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.showAndWait();
+    }
 }

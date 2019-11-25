@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="265.0"
+            prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.ContaInfoController">
+    <Label alignment="CENTER" layoutX="286.0" layoutY="14.0" text="Informações do Usuário" textAlignment="CENTER"
+           AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="10.0">
+        <font>
+            <Font size="32.0"/>
+        </font>
+    </Label>
+    <TextField fx:id="txtUsuario" layoutX="15.0" layoutY="97.0" AnchorPane.leftAnchor="15.0"
+               AnchorPane.rightAnchor="15.0"/>
+    <TextField fx:id="txtQtdTextos" layoutX="15.0" layoutY="195.0" AnchorPane.leftAnchor="15.0"
+               AnchorPane.rightAnchor="15.0"/>
+    <Button fx:id="btnOk" layoutX="150.0" layoutY="220.0" mnemonicParsing="false" onMouseClicked="#ok" text="OK"
+            AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0"/>
+    <GridPane layoutY="145.0" prefHeight="25.0" prefWidth="570.0" AnchorPane.leftAnchor="15.0"
+              AnchorPane.rightAnchor="15.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+        </rowConstraints>
+        <PasswordField fx:id="txtSenha" GridPane.columnSpan="2"/>
+        <Button mnemonicParsing="false" onMouseClicked="#alterarSenha" text="Alterar Senha"
+                GridPane.columnIndex="2"/>
+    </GridPane>
+    <Label layoutX="15.0" layoutY="80.0" text="Usuário: "/>
+    <Label layoutX="14.0" layoutY="178.0" text="Quantidade de texto encriptados:"/>
+    <Label layoutX="14.0" layoutY="129.0" text="Senha: "/>
+</AnchorPane>

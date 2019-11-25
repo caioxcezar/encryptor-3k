@@ -9,58 +9,64 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox fx:controller="controller.MenuController" prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/10.0.2" xmlns:fx="http://javafx.com/fxml/1">
-  <children>
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/10.0.2-internal"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MenuController">
     <MenuBar VBox.vgrow="NEVER">
-      <menus>
         <Menu mnemonicParsing="false" text="Funçoes">
-          <items>
-            <MenuItem mnemonicParsing="false" onAction="#encriptarArquivo" text="Encriptar" />
-            <MenuItem mnemonicParsing="false" onAction="#desencriptarArquivo" text="Desencriptar" />
-          </items>
+            <MenuItem mnemonicParsing="false" onAction="#encriptarArquivo" text="Encriptar"/>
+            <MenuItem mnemonicParsing="false" onAction="#desencriptarArquivo" text="Desencriptar"/>
+            <MenuItem mnemonicParsing="false" onAction="#abrirConta" text="Conta"/>
         </Menu>
-      </menus>
-         <contextMenu>
-            <ContextMenu fx:id="mb_opcoes">
-              <items>
-                <MenuItem mnemonicParsing="false" text="Unspecified Action" />
-              </items>
+        <contextMenu>
+            <ContextMenu>
+                <items>
+                    <MenuItem mnemonicParsing="false" text="Unspecified Action"/>
+                </items>
             </ContextMenu>
-         </contextMenu>
+        </contextMenu>
     </MenuBar>
-      <AnchorPane prefHeight="380.0" prefWidth="640.0">
-         <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="214.0" layoutY="14.0" prefHeight="77.0" prefWidth="212.0" text="Encriptator 3k" textAlignment="CENTER" textOverrun="CLIP">
-               <font>
-                  <Font size="32.0" />
-               </font>
-            </Label>
-            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="197.0" layoutY="74.0" prefHeight="35.0" prefWidth="247.0" text="Criptografia de mensagens" textOverrun="CENTER_ELLIPSIS">
-               <font>
-                  <Font size="19.0" />
-               </font>
-            </Label>
-            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="197.0" layoutY="116.0" prefHeight="35.0" prefWidth="247.0" text="Membros" textOverrun="CENTER_ELLIPSIS">
-               <font>
-                  <Font size="19.0" />
-               </font>
-            </Label>
-            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="197.0" layoutY="151.0" prefHeight="35.0" prefWidth="247.0" text="Caio Cezar" textOverrun="CENTER_ELLIPSIS">
-               <font>
-                  <Font size="13.0" />
-               </font>
-            </Label>
-            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="197.0" layoutY="195.0" prefHeight="35.0" prefWidth="247.0" text="Luiz Antonio" textOverrun="CENTER_ELLIPSIS">
-               <font>
-                  <Font size="13.0" />
-               </font>
-            </Label>
-            <!-- <Label alignment="CENTER" contentDisplay="CENTER" layoutX="197.0" layoutY="239.0" prefHeight="35.0" prefWidth="247.0" text="Helio Junior" textOverrun="CENTER_ELLIPSIS">
-               <font>
-                  <Font size="13.0" />
-               </font>
-            </Label> -->
-         </children>
-      </AnchorPane>
-  </children>
+    <AnchorPane prefHeight="380.0" prefWidth="640.0">
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="214.0" layoutY="14.0" prefHeight="77.0"
+               prefWidth="212.0" text="Encriptator 3k" textAlignment="CENTER" textOverrun="CLIP"
+               AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0">
+            <font>
+                <Font size="32.0"/>
+            </font>
+        </Label>
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="197.0" layoutY="74.0" prefHeight="35.0"
+               prefWidth="247.0" text="Criptografia de mensagens" textOverrun="CENTER_ELLIPSIS"
+               AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="75.0">
+            <font>
+                <Font size="19.0"/>
+            </font>
+        </Label>
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="197.0" layoutY="116.0" prefHeight="35.0"
+               prefWidth="247.0" text="Membros" textOverrun="CENTER_ELLIPSIS" AnchorPane.leftAnchor="15.0"
+               AnchorPane.rightAnchor="15.0">
+            <font>
+                <Font size="19.0"/>
+            </font>
+        </Label>
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="197.0" layoutY="151.0" prefHeight="35.0"
+               prefWidth="247.0" text="Caio Cézar" textOverrun="CENTER_ELLIPSIS" AnchorPane.leftAnchor="15.0"
+               AnchorPane.rightAnchor="15.0">
+            <font>
+                <Font size="13.0"/>
+            </font>
+        </Label>
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="15.0" layoutY="186.0" prefHeight="35.0"
+               prefWidth="247.0" text="Luiz Antonio" textOverrun="CENTER_ELLIPSIS" AnchorPane.leftAnchor="15.0"
+               AnchorPane.rightAnchor="15.0">
+            <font>
+                <Font size="13.0"/>
+            </font>
+        </Label>
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="15.0" layoutY="221.0" prefHeight="35.0"
+               prefWidth="247.0" text="Helio Junior" textOverrun="CENTER_ELLIPSIS" AnchorPane.leftAnchor="15.0"
+               AnchorPane.rightAnchor="15.0">
+            <font>
+                <Font size="13.0"/>
+            </font>
+        </Label>
+    </AnchorPane>
 </VBox>

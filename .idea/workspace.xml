@@ -1,32 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Usuario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/Encrypt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/EncryptString.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/Encryptable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/PasswordEncrypt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Add views para cadastro e login de usuario, assim como correções no codigo para o mesmo">
+      <change afterPath="$PROJECT_DIR$/src/controller/ContaInfoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controller/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dao/UsuarioDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/ContaInfo.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/Login.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/sample/sample.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/encryptor-3k/controller/DesencriptarController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/encryptor-3k/controller/DesencriptarController$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/encryptor-3k/controller/DesencriptarController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/encryptor-3k/controller/DesencriptarController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/encryptor-3k/controller/EncriptarController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/encryptor-3k/controller/EncriptarController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/encryptor-3k/controller/MenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/encryptor-3k/controller/MenuController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/encryptor-3k/dao/TextoDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/encryptor-3k/dao/TextoDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/encryptor-3k/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/encryptor-3k/main/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/encryptor-3k/model/Texto.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/encryptor-3k/model/Texto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/encryptor-3k/utils/CryptatorString.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/encryptor-3k/utils/FxUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/encryptor-3k/utils/FxUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/encryptor-3k/view/Desencriptar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/encryptor-3k/view/Desencriptar.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/encryptor-3k/view/Encriptar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/encryptor-3k/view/Encriptar.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/encryptor-3k/view/MensagemTela.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/encryptor-3k/view/MensagemTela.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/encryptor-3k/view/Menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/encryptor-3k/view/Menu.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/DesencriptarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/DesencriptarController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/EncriptarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/EncriptarController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/MenuController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dao/TextoDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/TextoDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/Texto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Texto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/CryptatorString.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/FxUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/FxUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/PasswordEncrypt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/PasswordEncrypt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/Desencriptar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Desencriptar.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/Encriptar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Encriptar.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/MensagemTela.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/MensagemTela.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/Menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Menu.fxml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -117,6 +123,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mariadb" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="GoToFile.includeJavaFiles" value="false" />
@@ -142,11 +149,14 @@
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="utils" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\caioc\IdeaProjects\encryptor-3k\src\view" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="dao" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="utils" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -234,6 +244,16 @@
       </method>
     </configuration>
   </component>
+  <component name="ServiceViewManager">
+    <option name="allServicesViewState">
+      <serviceView>
+        <treeState>
+          <expand />
+          <select />
+        </treeState>
+      </serviceView>
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration>C:\Users\caioc\AppData\Roaming\Subversion</configuration>
   </component>
@@ -252,6 +272,7 @@
       <workItem from="1571595487581" duration="7799000" />
       <workItem from="1573918782122" duration="115000" />
       <workItem from="1573919242056" duration="14739000" />
+      <workItem from="1574617176004" duration="22386000" />
     </task>
     <servers />
   </component>
@@ -263,7 +284,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -272,19 +295,16 @@
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
+    <MESSAGE value="Add views para cadastro e login de usuario, assim como correções no codigo para o mesmo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add views para cadastro e login de usuario, assim como correções no codigo para o mesmo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/utils/FxUtils.java</url>
-          <line>14</line>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/Main.java</url>
-          <line>15</line>
-          <option name="timeStamp" value="24" />
+          <url>file://$PROJECT_DIR$/src/controller/DesencriptarController.java</url>
+          <line>63</line>
+          <option name="timeStamp" value="63" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
